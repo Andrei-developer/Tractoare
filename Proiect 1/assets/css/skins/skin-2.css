@@ -1,0 +1,198 @@
+/* /////////////////////// 
+ -------    Root   -------- 
+/////////////////////// */
+  
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --black2 : #151515;
+  --transparent-black: #00000089;
+  --transparent-white: #9d9d9d7b;
+  --transparent-white1: #ffffff5c;
+  --transparent-gray: #ffffff76;
+  --transparent-gray1: #3c3c3c3b;
+  --gray : #515151;
+  --gray1: #cdcdcd;
+  --gray2: #808080;
+  --body-gray: #626262;
+  --sand-color: #e2d2908d;
+  --sand: #ddce9a;
+  --gold: #ffd700;
+  --crem: #dad3a5;
+  --transparent-sand:  #ddcf9a9c;
+  --transparent-sand1:  #ddcf9acc;
+  --crem1: #bbb774;
+  --white-yellow: #f9f2c7;
+ }
+   
+/* /////////////////////// 
+--------   body   -------- 
+/////////////////////// */
+   
+body {
+  background-color: var(--body-gray);
+}
+   
+/* /////////////////////// 
+--------   Nav   -------- 
+/////////////////////// */
+
+.active {
+  color: var(--white);
+  background-color: var(--transparent-black);
+}
+
+nav {
+  background-color: var(--transparent-black);
+}
+   
+nav a{
+  color: var(--black);
+  background-color: var(--transparent-white1);
+  border: 1.5px solid var(--transparent-white);
+}
+
+nav a:hover {
+  background-color: var(--transparent-gray1);
+  color: var(--white);
+}
+
+.hamburger span {
+  background-color: var(--gray2);
+}
+
+.hamburger {
+    background-color: var(--transparent);
+}
+
+/* /////////////////////// 
+-------   Section   ------- 
+/////////////////////// */
+   
+section div {
+  border: 2px solid var(--gray);
+  background-color: var(--gray);
+}
+   
+.btnBlack{
+  background: linear-gradient(45deg, var(--black) , var(--gray));
+}
+   
+.btnWhite{
+  background: linear-gradient(45deg, var(--white) , var(--gray1));
+}
+   
+h1{
+  color: var(--black);
+}
+      
+video {
+  border: solid 3px var(--black2);
+}
+
+/* /////////////////////// 
+--------   Main   -------- 
+/////////////////////// */
+   
+.mainHome {
+  background-color: var(--black2);
+}
+   
+.mainDetails{
+  background-color: var(--white);
+}
+
+.recenzii{
+  background-color: var(--white);
+} 
+
+.recenzii div {
+  color: var(--gold);
+}
+   
+/* /////////////////////// 
+-------   Footer   -------
+/////////////////////// */
+   
+footer{
+  background-color: var(--black2);
+}
+   
+footer a{
+  background-color: var(--gray);
+  color: var(--black);
+}
+
+/* /////////////////////// 
+--------   Products   -------- 
+/////////////////////// */
+
+.title{
+  background-color: var(--black2);
+}
+
+.mainProducts{
+  background-color: var(--black2);
+}
+
+.mainProducts > div {
+  background-color: var(--transparent-white);
+}
+
+.mainProducts p {
+  box-shadow: 0px 0px 4px 0px var(--white);
+}
+
+.showDetails {
+  background-color: var(--transparent-white1);
+  color: var(--black2);
+  border: 1px solid var(--transparent-white);
+}
+
+.showDetails:hover {
+  background-color: var(--gray1);
+}
+
+/* /////////////////////// 
+--------   About   -------- 
+/////////////////////// */
+
+.aboutMain {
+  background-color: var(--black2);
+}
+
+.aboutMain h2 {
+  background-color: var(--gray1);
+}
+
+.aboutMain h3 {
+  background-color: var(--gray1);
+}
+
+.aboutMain p {
+  background-color: var(--transparent-gray);
+}
+
+.aboutMain li {
+  background-color: var(--transparent-gray);
+}
+
+.aboutMain p, li {
+  color: var(--white);
+}
+
+/* /////////////////////// 
+-------   Contact   ------- 
+/////////////////////// */
+
+.mainContact {
+  background-color: var(--black2);
+}
+
+.contact {
+  background-color: var(--transparent-white);
+}
+
+.contact h2 {
+  background-color: var(--transparent-white1);
+}     

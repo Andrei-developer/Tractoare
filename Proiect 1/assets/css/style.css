@@ -1,0 +1,560 @@
+/* /////////////////////// 
+ -------Resset code-------- 
+ /////////////////////// */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ///////////////////////
+ ---------Colors---------- 
+ /////////////////////// */
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #e2e2e2;
+  --grey2: #e2e2e2;
+}
+
+/* /////////////////////// 
+   --------   body   -------- 
+   /////////////////////// */
+
+body {
+  display: flex;
+  margin: 0px 2.5%;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* /////////////////////// 
+ -------    header   ------- 
+ /////////////////////// */
+
+header {
+  display: flex;
+  position: sticky;
+  top: 30px;
+  width: 100%;
+  z-index: 2;
+  margin: -55px 0px 0px 0px;
+}
+
+/* /////////////////////// 
+ --------    Nav   -------- 
+ /////////////////////// */
+
+nav {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  width: 100%;
+  backdrop-filter: blur(45px);
+  border-radius: 20px 20px 0px 0px;
+}
+
+nav img {
+  width: 60px;
+  height: 60px;
+  margin: 0px 0px 0px 20px;
+}
+
+li {
+  list-style: none;
+}
+
+nav ul {
+  display: flex;
+  position: fixed;
+  gap: 60px;
+  right: 20px;
+  transition: 1s ease;
+}
+
+nav a {
+  display: flex;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px 15px 8px 15px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  right: 200px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 750px) and (min-width: 50px) {
+
+  nav {
+    margin: -30px auto auto auto;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(8px) rotate(-45deg);
+  }
+
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 16px 0;
+  }
+
+  nav ul.active {
+    left: 0%;
+  }
+
+  nav a {
+    padding: 5px 70px 5px 70px;
+  }
+
+}
+
+/* /////////////////////// 
+   --------   Section   -------- 
+   /////////////////////// */
+
+section {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+  margin: 80px 0px 0px 0px;
+}
+
+section div {
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  width: 75px;
+  height: 35px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  top: 10px;
+  left: 10px;
+}
+
+.color-1,
+.color-2 {
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.color-1 {
+  background: linear-gradient(45deg, var(--white), var(--gray1));
+}
+
+
+.color-2 {
+  background: linear-gradient(45deg, var(--black), var(--gray));
+}
+
+h1 {
+  position: absolute;
+}
+
+video {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* /////////////////////// 
+   --------   Main   -------- 
+   /////////////////////// */
+
+.mainHome {
+  display: flex;
+  position: relative;
+  border-radius: 20px;
+  top: 10px;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+.mainDetails {
+  position: relative;
+  flex-direction: column;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.mainHome h2 {
+  margin-bottom: 10px;
+}
+
+.recenzii {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  bottom: 15px;
+  border-radius: 20px;
+}
+
+
+/* /////////////////////// 
+  --------   Footer   -------- 
+   /////////////////////// */
+
+footer {
+  display: flex;
+  height: 40px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 16px;
+}
+
+footer ul {
+  margin: 0px 2.5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer a {
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+@media (max-width: 470px) {
+  footer ul {
+    width: 80%;
+    justify-content: space-between;
+  }
+
+  footer a {
+    padding: 5px 15px;
+  }
+}
+
+/* /////////////////////// 
+   --------   Products   -------- 
+   /////////////////////// */
+
+.title {
+  display: flex;
+  position: relative;
+  top: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.mainProducts {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+
+.mainProducts>div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.mainProducts img {
+  width: 370px;
+}
+
+.mainProducts p {
+  margin: auto;
+  padding: 5px 10px;
+  border-radius: 10px;
+  left: 0;
+}
+
+.showDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 7.5px;
+  margin: auto;
+  width: 250px;
+  height: 40px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+/* /////////////////////// 
+--------   About   -------- 
+/////////////////////// */
+
+.aboutMain {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  gap: 20px;
+  padding: 20px 50px;
+}
+
+.aboutMain h2 {
+  margin: auto;
+  padding: 8px 100px;
+  border-radius: 20px;
+}
+
+.aboutMain h3 {
+  margin: 0px auto 0px 0px;
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+.aboutMain p {
+  margin: 0px auto 0px 0px;
+  left: 0px;
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+.aboutMain li {
+  margin: 0px auto 10px 0px;
+  list-style-type: disc;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+@media (max-width: 440px) {
+  .aboutMain h2 {
+    padding: 5px 50px;
+  }
+}
+
+/* /////////////////////// 
+-------   Contact   ------- 
+/////////////////////// */
+
+.mainContact {
+  display: flex;
+  border-radius: 20px;
+}
+
+.maps {
+  width: 70%;
+  border-radius: 20px;
+  margin: 20px 20px;
+}
+
+.contact {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 10px;
+}
+
+.contact h2 {
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+.contact h3, p {
+  position: relative;
+  left: 20px;
+}
+
+@media (max-width: 750px) {
+
+  .mainContact {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .maps {
+    width: 100%;
+    margin: 0px;
+  }
+  
+  .contact {
+    width: 100%;
+    margin: 0px;
+  }
+
+}
+
+/* /////////////////////// 
+-------   Product   ------- 
+/////////////////////// */
+
+ 
+.chevron a {
+  position: relative;
+  padding: 13px 16px;
+  top: 80px;
+  background-color: var(--grey);
+  border-radius: 100%;
+  border: 2px solid var(--black);
+  color: var(--black);
+}
+
+.chevron {
+  position: sticky;
+  top: 60px;
+  z-index: 1;
+}
+
+.sectionProduct {
+  top: 70px;
+  width: 100%;
+  flex-direction: column;
+  margin: auto auto;
+}
+
+.sectionProduct h1 {
+  position: relative;
+  display: flex;
+  top: 15px;
+  justify-content: center;
+  margin: -50px 0px 40px 0px;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 5px 0px;
+  width: 70%;
+}
+
+.sectionProduct img {
+  width: 100%;
+}
+
+.mainProduct {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey2);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.mainProduct h2 {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: var(--white);
+  margin: 20px auto 20px 0px;
+}
+
+.mainProduct h3 {
+  margin: 20px;
+}
+
+.mainProduct p {
+  margin: 0px 40px 0px 0px;
+}
+
+.mainProduct img {
+  width: 100%;
+  border-radius: 15px;
+  margin: 20px auto;
+}
+
+.mainProduct span {
+  padding: 20px;
+  line-height: 30px;
+  border-radius: 20px;
+  background-color: var(--white);
+}
+
+.mainProduct ul {
+  padding: 0px 0px 0px 20px;
+}
+
+.mainProduct li {
+  line-height: 40px;
+}
+
+@media (min-width: 700px) {
+  .mainProduct span {
+    font-size: 120%;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .chevron {
+    top: 35px;
+  }
+
+  .sectionProduct h1 {
+    top: 20px;
+  }
+
+  .sectionProduct img {
+    position: relative;
+    top: -30px;
+  }
+}
